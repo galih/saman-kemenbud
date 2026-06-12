@@ -30,18 +30,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Installer EXE
-        uses: actions/upload-artifact@v4
-        with:
-          name: SAMAN-Kemenbud-Installer
-          path: dist/*Setup*.exe
-          retention-days: 30
-          if-no-files-found: warn
+      - name: List dist folder
+        run: dir dist
+        shell: cmd
 
-      - name: Upload Portable EXE
+      - name: Upload all EXE artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: SAMAN-Kemenbud-Portable
-          path: dist/*Portable*.exe
+          name: SAMAN-Kemenbud-Windows
+          path: dist/*.exe
           retention-days: 30
-          if-no-files-found: warn
+          if-no-files-found: error
