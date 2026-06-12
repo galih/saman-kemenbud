@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -34,11 +33,12 @@ jobs:
           name: SAMAN-Kemenbud-Installer
           path: dist/*Setup*.exe
           retention-days: 30
+          if-no-files-found: warn
 
       - name: Upload Portable EXE
         uses: actions/upload-artifact@v4
         with:
           name: SAMAN-Kemenbud-Portable
-          path: dist/*.exe
+          path: dist/*Portable*.exe
           retention-days: 30
           if-no-files-found: warn
