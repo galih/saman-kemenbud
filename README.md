@@ -65,4 +65,4 @@ saman-kemenbud/
 
 ## Lisensi
 
-Disediakan untuk keperluan internal. Situs SAMAN adalah milik Kementerian Kebudayaan Republik Indonesia.
+Disediakan untuk keperluan internal. SAMAN adalah milik Kementerian Kebudayaan Republik Indonesia.
